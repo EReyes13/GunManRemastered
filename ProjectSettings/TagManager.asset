@@ -8,6 +8,7 @@ TagManager:
   - PoisonSpreadable
   - Dam
   - coins
+  - Terrain
   layers:
   - Default
   - TransparentFX

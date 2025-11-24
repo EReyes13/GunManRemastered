@@ -74,7 +74,7 @@ public class EnemyPathFinding : MonoBehaviour
     {
         Vector2 checkPos = (Vector2)transform.position + dir * tileSize;
         return !Physics2D.OverlapCircle(checkPos, 0.1f, obstacleLayer);
-        return !Physics2D.OverlapCircle(checkPos, 0.1f, obstacleDam);
+        //return !Physics2D.OverlapCircle(checkPos, 0.1f, obstacleDam);
     }
 
     Vector2Int GetRandomValidDirection()

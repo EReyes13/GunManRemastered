@@ -282,6 +282,7 @@ MonoBehaviour:
   _poisonSmoke: {fileID: 408241601}
   _minimumSpawnTime: 0
   _maximumSpawnTime: 3
+  _maxSpawns: 1
 --- !u!4 &44845439
 Transform:
   m_ObjectHideFlags: 0
@@ -1841,6 +1842,10 @@ MonoBehaviour:
   bullet: {fileID: 963716476054199927, guid: 073c94e1bee309f48b10366e6088c002, type: 3}
   chargeBullet: {fileID: 963716476054199927, guid: fa1c0704ae8724942bea360d55de05f5, type: 3}
   dam: {fileID: 4004915102742648959, guid: 298d4c8fbe6b1e04d8672249d4877a21, type: 3}
+  WeaponType:
+  - {fileID: 963716476054199927, guid: 073c94e1bee309f48b10366e6088c002, type: 3}
+  - {fileID: 8976052872501300941, guid: 8c7f724a2b250d84cb92a94720417589, type: 3}
+  WeaponEquip: 0
   fireForce: 10
   minChargeTime: 0.4
   ChargeTime: 0
@@ -2775,7 +2780,7 @@ GameObject:
   - component: {fileID: 844111979}
   m_Layer: 7
   m_Name: the above
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4689,6 +4694,7 @@ MonoBehaviour:
   _poisonSmoke: {fileID: 408241601}
   _minimumSpawnTime: 0
   _maximumSpawnTime: 3
+  _maxSpawns: 1
 --- !u!4 &1376147277
 Transform:
   m_ObjectHideFlags: 0

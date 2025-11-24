@@ -12,6 +12,9 @@ public class PlayerShooting : MonoBehaviour
     public GameObject chargeBullet;
     public GameObject dam;
 
+    public GameObject[] WeaponType = new GameObject[2];
+    public int WeaponEquip = 0;
+
     [Header("Standard Shot")]
     public float fireForce = 10f;
     float shootCooldown = 0.25f;
@@ -80,9 +83,11 @@ public class PlayerShooting : MonoBehaviour
         {
             ChargeTime = 0; // prevents charge shot from shooting when spamming shoot
             shootTimer = 0;
-            GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
+            GameObject intBullet = Instantiate(WeaponType[WeaponEquip], Aim.position, Aim.rotation);
             intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
+            if(WeaponEquip == 0){
             Destroy(intBullet, .3f); // destroys after .3 seconds or 3 tiles
+            }
         }
     }
 
