@@ -7,6 +7,7 @@ public class SniperBullet : MonoBehaviour
     public Rigidbody2D rb;
     public float Velx;
     public float Vely;
+    public int bounce = 0;
     
     public void OnTriggerEnter2D( Collider2D other)
     {
@@ -27,6 +28,7 @@ public class SniperBullet : MonoBehaviour
                 Velx = rb.linearVelocity.x;
                 Debug.Log("BounceBack");
                 rb.linearVelocity = new Vector2(-Velx, rb.linearVelocity.y);
+                bounce ++;
                 }
                 else if (rb.linearVelocityY != 0)
             {
@@ -34,6 +36,11 @@ public class SniperBullet : MonoBehaviour
                 Vely = rb.linearVelocity.y;
                 Debug.Log("BounceBack");
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, -Vely);
+                bounce ++;
+            }
+            if(bounce == 3)
+            {
+                Destroy(gameObject);
             }
             }
     }

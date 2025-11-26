@@ -58,6 +58,10 @@ public class Enemy : MonoBehaviour
         {
             DamManager.instance.TakeDamage(damageAmount);
         }
+        if(collision.CompareTag("Barrel"))
+        {
+            InstaDeath();
+        }
     }
 
     // takes regular shot damage 
@@ -90,6 +94,11 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             GameManager.Instance.AddScore(10);
         }
+    }
+    //This instantly kills the enemy -Elio
+    public void InstaDeath()
+    {
+        Destroy(gameObject);
     }
 
     void CheckTile()

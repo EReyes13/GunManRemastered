@@ -9,6 +9,7 @@ TagManager:
   - Dam
   - coins
   - Terrain
+  - Barrel
   layers:
   - Default
   - TransparentFX

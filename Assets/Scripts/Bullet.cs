@@ -13,6 +13,15 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        if(other.CompareTag("Barrel"))
+        {
+            BarrelEx barrel = other.GetComponent<BarrelEx>();
+            if(barrel!= null)
+            {
+                //Debug.Log("Hit Barrel");
+                barrel.Boom();
+            }
+        }
     }
 }
 
