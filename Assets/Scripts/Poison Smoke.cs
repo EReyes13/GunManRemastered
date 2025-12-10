@@ -9,7 +9,7 @@ public class PoisonSmoke : MonoBehaviour
 {
     [Header("Tilemap Setup")]
     public Tilemap poisonTilemap;
-    public TileBase[] poisonTiles = new TileBase[6]; // tiles for poison levels 0–5
+    public TileBase[] poisonTiles = new TileBase[6]; // tiles for poison levels 0ï¿½5
 
     [Header("Poison Settings")]
     public int maxLevel = 5;
@@ -129,6 +129,7 @@ public class PoisonSmoke : MonoBehaviour
         // sets the poison level and calls the function to update the tile
         poisonLevels[pos] = level;
         UpdateTileVisual(pos, level);
+        Debug.Log ("Tile Updated");
     }
 
     public int GetPoisonLevel(Vector3Int pos)
